@@ -618,7 +618,8 @@ p {
 .hero-carousel .hero-caption {
   max-width: 720px;
   padding: 0;
-  
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 /* Em telas menores, apenas garantimos centralização */
@@ -630,6 +631,8 @@ p {
   .hero-carousel .hero-caption {
     text-align: center !important;
 	margin-top: 1.5rem; /* um pouco menos no mobile */
+  margin-left: 2rem;
+  margin-right: 2rem;
   }
 }
 
