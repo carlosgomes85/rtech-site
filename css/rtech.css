@@ -1,0 +1,667 @@
+/* =========================================================
+   R TECH - ESTILOS GERAIS
+   ========================================================= */
+
+:root {
+  --bs-danger: #f72d0f;
+  --bs-danger-rgb: 247, 45, 15;
+
+  /* Outline */
+  --bs-danger-text-emphasis: #f72d0f;
+  --bs-danger-bg-subtle: #ffe4dd;
+  --bs-danger-border-subtle: #ffb6a8;
+
+  /* Botões */
+  --bs-btn-hover-bg: #e22a0f;
+  --bs-btn-hover-border-color: #d1270e;
+  --bs-btn-active-bg: #c3240d;
+  --bs-btn-active-border-color: #b1210c;
+}
+
+.btn-danger {
+  background-color: #f72d0f;
+  border-color: #f72d0f;
+}
+
+.btn-danger:hover {
+  background-color: #e92a0e;
+  border-color: #da260d;
+}
+
+.btn-outline-danger {
+  color: #f72d0f;
+  border-color: #f72d0f;
+}
+
+.btn-outline-danger:hover {
+  background-color: #f72d0f;
+  color: #ffffff;
+}
+
+/* Rolagem suave para âncoras */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Corpo da página: claro e limpo */
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #262626;              /* cinza escuro */
+  background-color: #f5f5f5;   /* fundo claro */
+}
+
+/* Textos gerais */
+p {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  margin-bottom: 0.7rem;
+}
+
+.lead {
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* Container padrão (aproveitando Bootstrap, só ajustando padding) */
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 95%;
+  }
+}
+
+/* Link de pulo para acessibilidade */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0.5rem;
+  background: #111111;
+  color: #f9fafb;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  z-index: 1050;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.skip-link:focus {
+  left: 0.5rem;
+  outline: 2px solid #f72d0f;
+  outline-offset: 2px;
+}
+
+/* Main: não há mais header fixo, então não precisa de margem extra no topo */
+.rtech-main {
+  margin-top: 0;
+}
+
+/* =========================================================
+   HEADER / NAVBAR
+   ========================================================= */
+
+.rtech-navbar {
+  background: #111111; /* header escuro */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.navbar-brand {
+  color: #f5f5f5;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.brand-logo-icon {
+  height: 52px;
+}
+
+.brand-logo-text {
+  height: 52px;
+}
+
+/* Links de navegação */
+.rtech-nav-links .nav-link {
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(245, 245, 245, 0.9);
+  padding-inline: 0.75rem;
+  padding-block: 0.4rem;
+  position: relative;
+}
+
+.rtech-nav-links .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.9rem;
+  right: 0.9rem;
+  bottom: 0.15rem;
+  height: 2px;
+  background: linear-gradient(90deg, #f72d0f, #e4270a);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.18s ease-out;
+}
+
+.rtech-nav-links .nav-link:hover,
+.rtech-nav-links .nav-link:focus {
+  color: #ffffff;
+}
+
+.rtech-nav-links .nav-link:hover::after,
+.rtech-nav-links .nav-link:focus::after {
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   SEÇÕES / CARDS
+   ========================================================= */
+
+.rtech-sections {
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Card base para as seções */
+.section-card {
+  margin-block: 2.5rem;
+  padding: 2.2rem 1.6rem;
+  border-radius: 1.3rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff; /* padrão claro */
+}
+
+/* Versão escura de card (ex.: PC Gaming, Assistência) */
+.section-card.section-dark {
+  background-color: #1b1b1b;
+  color: #f5f5f5;
+}
+
+.section-card.section-dark p,
+.section-card.section-dark .lead {
+  color: #f5f5f5;
+}
+
+.section-card.section-dark .texto-titulo {
+  color: #f72d0f;
+}
+
+/* Versão clara (default) */
+.section-card.section-light {
+  background-color: #ffffff;
+}
+
+/* Subtítulo das seções */
+.section-subtitle {
+  color: #757575;
+  font-size: 0.95rem;
+}
+
+/* Âncoras para o scroll dos links do menu */
+.section-anchor {
+  position: relative;
+  top: -5rem;
+}
+
+/* Responsividade extra para seções */
+@media (max-width: 767.98px) {
+  .section-card {
+    margin-block: 1.8rem;
+    padding-inline: 1.25rem;
+  }
+}
+
+/* =========================================================
+   HERO / CARROSSEL
+   ========================================================= */
+
+.hero-carousel {
+  position: relative;
+}
+
+/* Carrossel sem cantos arredondados */
+.carousel {
+  margin-bottom: 0;
+}
+
+.carousel-inner {
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Cada slide */
+.carousel-item {
+  position: relative;
+  min-height: 60vh;
+}
+
+@media (min-width: 768px) {
+  .carousel-item {
+    min-height: 75vh;
+  }
+}
+
+/* Fundo da imagem do slide – ocupa todo o item */
+.hero-slide-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Overlay escuro suave */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.65)
+  );
+  z-index: 1;
+}
+
+/* Conteúdo do destaque (texto) */
+.hero-caption {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding-bottom: 3.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .hero-caption {
+    text-align: center !important;
+  }
+}
+
+/* Indicadores do carrossel */
+.carousel-indicators [data-bs-target] {
+  background-color: #f72d0f;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 999px;
+  opacity: 0.7;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background: linear-gradient(90deg, #f72d0f, #df351a);
+}
+
+/* Setas do carrossel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.6));
+}
+
+/* =========================================================
+   FUNDOS DOS SLIDES (IMAGENS)
+   ========================================================= */
+
+/* Caminhos relativos ao arquivo css/rtech.css → ../assets/img/... */
+
+.assistencia {
+  background: rgba(0, 0, 0, 0.6) url('../assets/img/assistencia.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.gaming {
+  background: rgba(0, 0, 0, 0.6) url('../assets/img/gaming.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.suporte-ti {
+  background: rgba(0, 0, 0, 0.6) url('../assets/img/suporte-ti.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.desempenho {
+  background: rgba(0, 0, 0, 0.6) url('../assets/img/desempenho.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+/* =========================================================
+   TÍTULOS / TIPOGRAFIA ESPECIAL
+   ========================================================= */
+
+.texto-titulo {
+  color: #e62a0e;
+  font-size: 2.1rem;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .texto-titulo {
+    font-size: 2.4rem;
+  }
+}
+
+.texto-big {
+  color: #202020;
+  font-size: 2.4rem;
+  line-height: 1.4;
+}
+
+.titulo-carrossel {
+  color: #f5f5f5;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+@media (min-width: 768px) {
+  .titulo-carrossel {
+    font-size: 3rem;
+  }
+}
+
+.subtitulo-carrossel {
+  color: #e0e0e0;
+  font-size: 0.98rem;
+}
+
+/* Featurettes (títulos grandes das seções) */
+.featurette-heading {
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -.02rem;
+}
+
+@media (min-width: 40em) {
+  .featurette-heading {
+    font-size: 2.3rem;
+  }
+}
+
+/* =========================================================
+   CARDS DE SERVIÇO / ÍCONES
+   ========================================================= */
+
+.icon-display {
+  font-size: 140px;
+  text-align: center;
+}
+
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background: linear-gradient(135deg, #f72d0f, #ca351f);
+  border-radius: 1rem;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border-radius: 1.2rem;
+  padding: 1.1rem 1rem 1.3rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, border-color 0.18s ease-out, background 0.18s ease-out;
+  text-align: center;
+}
+
+.feature-card h3 {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 1.05rem;
+  color: #262626;
+}
+
+.feature-card p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.feature-card:hover,
+.feature-card:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+  border-color: rgba(202, 53, 31, 0.45);
+  background: #ffffff;
+}
+
+/* Ícones genéricos / links com ícone */
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon-link > .bi {
+  margin-top: .125rem;
+  margin-left: .125rem;
+  transition: transform .25s ease-in-out;
+}
+
+.icon-link:hover > .bi {
+  transform: translate(.25rem);
+}
+
+.icon-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: .75rem;
+}
+
+/* =========================================================
+   FIGURAS / MAPA / EMBED SOCIAL
+   ========================================================= */
+
+.rtech-figure {
+  margin: 0;
+}
+
+.rtech-map-wrapper {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.rtech-map {
+  width: 100%;
+  min-height: 320px;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .rtech-map {
+    min-height: 380px;
+  }
+}
+
+.rtech-embed-wrapper {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+  background-color: #ffffff;
+}
+
+.rtech-embed-iframe {
+  min-height: 360px;
+}
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rtech-footer {
+  margin-top: 3rem;
+  background: #111111 !important;
+  color: #e5e5e5;
+  padding-bottom: 2rem !important; /* aumenta a área clicável */
+}
+
+.rtech-footer .text-white-50 {
+  color: rgba(245, 245, 245, 0.7) !important;
+}
+
+.rtech-footer .social-media i {
+  transition: transform .3s;
+}
+
+.rtech-footer .social-media:hover i {
+  transform: scale(1.15);
+}
+
+.social-media {
+  color: #f72d0f;
+  transition: color 0.18s ease-out, transform 0.18s ease-out;
+}
+
+.social-media:hover,
+.social-media:focus {
+  color: #f9735b;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   ELEMENTOS AUXILIARES
+   ========================================================= */
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, .03);
+  border: solid rgba(0, 0, 0, .06);
+  border-width: 1px 0;
+  box-shadow:
+    inset 0 .5em 1.5em rgba(0, 0, 0, .03),
+    inset 0 .125em .5em rgba(0, 0, 0, .05);
+}
+
+.rounded-4 {
+  border-radius: .9rem !important;
+}
+
+.rounded-5 {
+  border-radius: 1.25rem !important;
+}
+
+/* Sombras de texto, se quiser usar em títulos */
+.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+
+/* =========================================================
+   AJUSTE FINO DO CARROSSEL (CENTRALIZAÇÃO)
+   ========================================================= */
+
+/* Deixar o container de cada slide ocupando a altura e
+   centralizando o conteúdo na vertical + horizontal */
+.hero-carousel .carousel-item > .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;      /* centro vertical */
+  justify-content: center;  /* centro horizontal */
+}
+
+/* Sobrescreve o padrão do Bootstrap (que prende em bottom: 3rem) */
+.hero-carousel .carousel-caption {
+  position: static;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  padding: 0 0.75rem;
+  margin: 0;
+  text-align: center;       /* alinha texto centralizado em todos os slides */
+}
+
+/* O bloco de texto em si */
+.hero-carousel .hero-caption {
+  max-width: 720px;
+  padding: 0;
+  margin-top: 4.5rem;  /* afasta do topo / menu */
+}
+
+/* Em telas menores, apenas garantimos centralização */
+@media (max-width: 767.98px) {
+  .hero-carousel .carousel-item > .container {
+    padding-inline: 1.25rem;
+  }
+
+  .hero-carousel .hero-caption {
+    text-align: center !important;
+	margin-top: 1.5rem; /* um pouco menos no mobile */
+  }
+}
+
+/* Botão flutuante "voltar ao topo" */
+.btn-back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 1030;                /* acima de quase tudo */
+  border-radius: 999px;
+  padding: 0.65rem 0.85rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+}
+
+/* Estado visível */
+.btn-back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Opcional: leve ajuste em telas bem pequenas */
+@media (max-width: 576px) {
+  .btn-back-to-top {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
