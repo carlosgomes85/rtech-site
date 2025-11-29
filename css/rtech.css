@@ -247,7 +247,7 @@ p {
 /* Cada slide */
 .carousel-item {
   position: relative;
-  height: 85vh;
+  height: 80vh;
 }
 
 @media (min-width: 768px) {

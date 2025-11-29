@@ -1,647 +1,806 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <title>R Tech Informática | Montagem e manutenção de computadores</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <title>R Tech Informática | Montagem e manutenção de computadores</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="icon" type="image/x-icon" href="assets/img/logoIcone.png">
+    <link rel="icon" type="image/x-icon" href="assets/img/logoIcone.png" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="css/rtech.css">
-</head>
-<body id="topo">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/rtech.css" />
+  </head>
+  <body id="topo">
+    <!-- Link de pulo para acessibilidade -->
+    <a href="#scrollspyAssistencia" class="skip-link"
+      >Ir para o conteúdo principal</a
+    >
 
-  <!-- Link de pulo para acessibilidade -->
-  <a href="#scrollspyAssistencia" class="skip-link">Ir para o conteúdo principal</a>
-
-  <!-- HEADER -->
-  <nav class="navbar navbar-expand-lg navbar-dark rtech-navbar" role="navigation" aria-label="Navegação principal">
-    <div class="container-fluid px-3 px-md-4">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#topo">
-        <span class="brand-image d-flex align-items-center gap-2">
-          <img
-            src="./assets/img/logoIcone.png"
-            class="brand-logo-icon"
-            alt="Logotipo da R Tech Informática"
-          />
-          <img
-            src="./assets/img/logoTexto.png"
-            class="brand-logo-text"
-            alt="R Tech Informática"
-          />
-        </span>
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarRtech"
-        aria-controls="navbarRtech"
-        aria-expanded="false"
-        aria-label="Alternar navegação"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarRtech">
-        <ul class="navbar-nav align-items-start align-items-lg-center rtech-nav-links">
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyAssistencia">Assistência Técnica</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyServicos">Serviços</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyGaming">PC Gaming</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyEmpresa">A Empresa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyLocalizacao">Localização</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyContato">Contato</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- CONTEÚDO PRINCIPAL -->
-  <main role="main" class="rtech-main">
-
-    <!-- HERO / CARROSSEL -->
-    <section class="hero-carousel" aria-label="Destaques da R Tech">
-      <div
-        id="myCarousel"
-        class="carousel slide carousel-fade"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Assistência Técnica"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="1"
-            aria-label="PC Gaming"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="2"
-            aria-label="Melhoria de Desempenho"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide-to="3"
-            aria-label="Notebooks"
-          ></button>
-        </div>
-
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="assistencia hero-slide-bg" role="img" aria-label="Assistência técnica em computadores"></div>
-            <div class="hero-overlay"></div>
-            <div class="container h-100 d-flex align-items-center justify-content-center">
-              <div class="carousel-caption hero-caption">
-                <h1 class="titulo-carrossel">Assistência Técnica</h1>
-                <p class="subtitulo-carrossel">
-                  Nossa assistência técnica de informática está pronta para resolver
-                  todos os seus desafios tecnológicos. Desde reparos rápidos até
-                  soluções complexas, nossa equipe especializada está aqui para
-                  garantir que seus dispositivos operem no seu auge.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="gaming hero-slide-bg" role="img" aria-label="PC Gamer montado com iluminação"></div>
-            <div class="hero-overlay"></div>
-            <div class="container">
-              <div class="carousel-caption hero-caption">
-                <h1 class="titulo-carrossel">PC Gaming</h1>
-                <p class="subtitulo-carrossel">
-                  A RTech é especializada em PC gaming, oferecendo tecnologia avançada
-                  para otimizar a experiência dos jogadores. Seus produtos, desde
-                  sistemas desktop potentes até periféricos de alta qualidade, são
-                  projetados para proporcionar máximo desempenho e imersão durante as
-                  sessões de jogo. 
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="desempenho hero-slide-bg" role="img" aria-label="Melhoria de desempenho em computadores"></div>
-            <div class="hero-overlay"></div>
-            <div class="container">
-              <div class="carousel-caption hero-caption">
-                <h1 class="titulo-carrossel">Melhoria de Desempenho</h1>
-                <p class="subtitulo-carrossel">
-                  Potencialize o desempenho do seu computador conosco! Oferecemos
-                  serviços especializados de manutenção e aprimoramento, garantindo
-                  que seu dispositivo funcione com máxima eficiência. Conte com nossa
-                  experiência técnica para resolver problemas, acelerar velocidades e
-                  otimizar seu computador.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <div class="suporte-ti hero-slide-bg" role="img" aria-label="Notebook sendo reparado"></div>
-            <div class="hero-overlay"></div>
-            <div class="container">
-              <div class="carousel-caption hero-caption">
-                <h1 class="titulo-carrossel">Notebooks</h1>
-                <p class="subtitulo-carrossel">
-                  Potencialize a vida útil do seu notebook conosco! Oferecemos
-                  serviços especializados de reparo técnico, com troca de bateria,
-                  tela e teclado. Deixe-nos cuidar do seu dispositivo para garantir
-                  que ele volte à sua melhor forma.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    <!-- HEADER -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark rtech-navbar"
+      role="navigation"
+      aria-label="Navegação principal"
+    >
+      <div class="container-fluid px-3 px-md-4">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#topo">
+          <span class="brand-image d-flex align-items-center gap-2">
+            <img
+              src="./assets/img/logoIcone.png"
+              class="brand-logo-icon"
+              alt="Logotipo da R Tech Informática"
+            />
+            <img
+              src="./assets/img/logoTexto.png"
+              class="brand-logo-text"
+              alt="R Tech Informática"
+            />
+          </span>
+        </a>
         <button
-          class="carousel-control-prev"
+          class="navbar-toggler"
           type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="prev"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarRtech"
+          aria-controls="navbarRtech"
+          aria-expanded="false"
+          aria-label="Alternar navegação"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#myCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Próximo</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- CONTEÚDO PRINCIPAL / SEÇÕES -->
-    <div class="container marketing rtech-sections">
-
-      <!-- ASSISTÊNCIA TÉCNICA -->
-      <span id="scrollspyAssistencia" class="section-anchor" aria-hidden="true"></span>
-      <section class="section-card section-dark" aria-labelledby="titulo-assistencia">
-        <div class="row align-items-center g-4">
-          <div class="col-md-7">
-            <h2 id="titulo-assistencia" class="featurette-heading texto-titulo mb-3">
-              Assistência Técnica
-            </h2>
-            <p class="lead text-light">
-              Analisamos minuciosamente seus equipamentos e elaboramos orçamentos
-              técnicos personalizados, executando reparos tanto no local quanto em
-              nosso laboratório, conforme a viabilidade técnica específica de cada
-              caso. Melhoramos significativamente o desempenho de seus
-              microcomputadores e notebooks, garantimos a operacionalidade contínua de
-              seus nobreaks e proporcionamos serviços especializados de manutenção
-              para impressoras e multifuncionais. Nosso compromisso é assegurar o
-              pleno funcionamento de seus dispositivos, utilizando expertise técnica e
-              soluções eficientes para atender às suas necessidades.
-            </p>
-          </div>
-          <div class="col-md-5">
-            <figure class="rtech-figure">
-              <img
-                src="assets/img/pcgamer4.jpg"
-                class="img-fluid rounded-4 shadow-lg"
-                alt="Técnico trabalhando em um computador"
-              />
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVIÇOS -->
-      <span id="scrollspyServicos" class="section-anchor" aria-hidden="true"></span>
-      <section class="section-card section-light" aria-labelledby="titulo-servicos">
-        <div class="text-center mb-4">
-          <h2 id="titulo-servicos" class="featurette-heading texto-titulo">
-            Serviços
-          </h2>
-          <p class="section-subtitle">
-            Soluções completas em informática para pessoas e empresas.
-          </p>
-        </div>
 
         <div
-          class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3"
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarRtech"
         >
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fas fa-laptop" aria-hidden="true"></i>
-              </div>
-              <h3>Notebooks</h3>
-              <p>Reparo técnico, troca de bateria, tela e teclado.</p>
-            </article>
-          </div>
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fas fa-users-cog" aria-hidden="true"></i>
-              </div>
-              <h3>Atendimento Especializado</h3>
-              <p>Para conserto, laudos e orçamentos.</p>
-            </article>
-          </div>
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fas fa-gamepad" aria-hidden="true"></i>
-              </div>
-              <h3>PC Gaming</h3>
-              <p>Monte o PC Gamer ideal para o seu uso.</p>
-            </article>
-          </div>
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fa-solid fa-house-laptop" aria-hidden="true"></i>
-              </div>
-              <h3>Customização</h3>
-              <p>Montagem de computadores com as configurações desejadas.</p>
-            </article>
-          </div>
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fa-solid fa-jet-fighter" aria-hidden="true"></i>
-              </div>
-              <h3>Melhorias de Desempenho</h3>
-              <p>Upgrade de Memórias, Discos Rígidos, SSDs etc.</p>
-            </article>
-          </div>
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
-              </div>
-              <h3>Saúde dos Dispositivos</h3>
-              <p>Remoção de vírus, análise de lentidão ou travamento.</p>
-            </article>
-          </div>
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
-              </div>
-              <h3>Serviços</h3>
-              <p>Avulsos ou por Contrato. Pessoas Físicas e Empresas.</p>
-            </article>
-          </div>
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fa-solid fa-laptop-medical" aria-hidden="true"></i>
-              </div>
-              <h3>Manutenções</h3>
-              <p>Corretivas, Preventivas e Adaptativas.</p>
-            </article>
-          </div>
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fas fa-download" aria-hidden="true"></i>
-              </div>
-              <h3>Atualizações</h3>
-              <p>Softwares e Sistemas Operacionais.</p>
-            </article>
-          </div>
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fas fa-user-secret" aria-hidden="true"></i>
-              </div>
-              <h3>Segurança</h3>
-              <p>Proteção contra vírus e outros ataques cibernéticos.</p>
-            </article>
-          </div>
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fa-solid fa-gear" aria-hidden="true"></i>
-              </div>
-              <h3>Configurações</h3>
-              <p>Instalação, configuração e manutenção de equipamentos.</p>
-            </article>
-          </div>
-          <div class="col">
-            <article class="feature feature-card h-100">
-              <div class="feature-icon bg-danger bg-gradient">
-                <i class="fa-solid fa-icons" aria-hidden="true"></i>
-              </div>
-              <h3>Aplicativos</h3>
-              <p>Reinstalação de Programas e Aplicativos.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- PC GAMING -->
-      <span id="scrollspyGaming" class="section-anchor" aria-hidden="true"></span>
-      <section class="section-card section-dark" aria-labelledby="titulo-gaming">
-        <div class="row align-items-center g-4">
-          <div class="col-md-6 order-md-2">
-            <figure class="rtech-figure">
-              <img
-                src="assets/img/gaming2.jpg"
-                class="img-fluid rounded-4 shadow-lg"
-                alt="PC Gamer iluminado montado pela RTech"
-              />
-            </figure>
-          </div>
-          <div class="col-md-6 order-md-1">
-            <h2 id="titulo-gaming" class="featurette-heading texto-titulo mb-3">
-              PC Gaming
-            </h2>
-            <p class="lead text-light">
-              A RTech Informática é uma empresa especializada em fornecer soluções de
-              alta performance para entusiastas de jogos. Com uma vasta gama de
-              produtos e expertise técnica, a RTech é o destino ideal para quem busca
-              montar o seu PC gamer dos sonhos. Com uma equipe especializada e os
-              melhores componentes disponíveis, oferecemos a oportunidade única de
-              construir o seu próprio PC gamer personalizado. Desde placas de vídeo
-              potentes até processadores de última geração, na RTech, cada detalhe é
-              cuidadosamente selecionado para proporcionar a melhor experiência de
-              jogo possível. Deixe-nos ajudar você a montar o PC dos seus sonhos e
-              elevar sua experiência de gaming para o próximo nível.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- AVALIAÇÕES -->
-      <span id="scrollspyReviews" class="section-anchor" aria-hidden="true"></span>
-      <section class="section-card section-light" aria-labelledby="titulo-avaliacoes">
-        <h2 id="titulo-avaliacoes" class="featurette-heading texto-titulo mb-3">
-          Avaliações
-        </h2>
-        <p class="section-subtitle">
-          Veja o que os clientes da R Tech Informática dizem sobre nossos serviços.
-        </p>
-        <div class="rtech-embed-wrapper">
-          <script src="https://embedsocial.com/js/iframe.js"></script>
-          <iframe
-            style="border: 0; width: 100%; height: 100%;"
-            class="rtech-embed-iframe"
-            scrolling="no"
-            src="https://embedsocial.com/api/pro_hashtag/4f504cfd3228af6b6b633f177bcccc6e1ef2df40"
-            title="Avaliações de clientes da R Tech"
-          ></iframe>
-          <script>if (typeof iFrameResize === 'function') { iFrameResize(); }</script>
-        </div>
-      </section>
-
-      <!-- A EMPRESA -->
-      <span id="scrollspyEmpresa" class="section-anchor" aria-hidden="true"></span>
-      <section class="section-card section-light" aria-labelledby="titulo-empresa">
-        <div class="row g-4 align-items-center">
-          <div class="col-md-7 col-xl-7">
-            <h2 id="titulo-empresa" class="featurette-heading texto-titulo mb-3">
-              A Empresa
-            </h2>
-            <p class="lead">
-              A RTECH Informática é uma assistência técnica especializada em computadores e notebooks, reconhecida pela precisão nos diagnósticos, transparência no atendimento e excelência na execução dos serviços. Fundada por Rafael Araújo, a empresa nasceu do desejo de oferecer soluções completas em tecnologia, unindo experiência técnica, atualização constante e um atendimento realmente humano.
-            </p>
-            <p class="lead">
-              Ao longo do tempo, a RTECH expandiu sua atuação, oferecendo manutenção, montagem de PCs Gamer, instalação de sistemas, otimizações, venda de materiais de informática e suporte especializado para clientes residenciais e empresas. Cada equipamento é tratado com responsabilidade e cada cliente recebe informações claras, desde o orçamento até a entrega final.
-            </p>
-            <p class="lead">
-              Localizada na Rua Sargento João Lopes, 855 – Loja B, em frente ao Restaurante Bortolini's, a empresa se tornou referência na região. As diversas avaliações positivas no Google reforçam o comprometimento da RTECH com a excelência, confirmando a confiança e a satisfação de quem já utilizou seus serviços.
-            </p>
-            <p class="lead">
-              A RTECH Informática segue crescendo de forma sólida, sempre buscando oferecer soluções modernas, eficientes e de alto padrão.
-            </p>
-          </div>
-          <div class="col-md-5 col-xl-5">
-            <figure class="rtech-figure text-center">
-              <img
-                src="assets/img/empresa.jpg"
-                class="img-fluid"
-                alt="R Tech Informática"
-              />
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- LOCALIZAÇÃO -->
-      <span id="scrollspyLocalizacao" class="section-anchor" aria-hidden="true"></span>
-      <section class="section-card section-light" aria-labelledby="titulo-localizacao">
-        <h2 id="titulo-localizacao" class="featurette-heading texto-titulo mb-3">
-          Localização
-        </h2>
-        <p class="lead">
-          A RTech Informática possui um espaço para atendimento físico aos
-          clientes que fica localizado na
-          <strong class="text-dark">
-            Rua Sargento João Lopes, 855, Loja B, Jardim Carioca, Rio de Janeiro,
-            RJ
-          </strong>.
-        </p>
-        <p class="mb-4">
-          <a
-            href="https://www.google.com.br/maps/place/Rua+Sargento+Jo%C3%A3o+L%C3%B3pes,+855+-+b+-+Jardim+Carioca,+Rio+de+Janeiro+-+RJ,+21931-420/@-22.8068738,-43.1996979,17z/data=!3m1!4b1!4m6!3m5!1s0x997821032ade91:0xcda30ae508f5846e!8m2!3d-22.8068788!4d-43.197123!16s%2Fg%2F11llbvv7_x?entry=ttu"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-lg btn-outline-danger"
+          <ul
+            class="navbar-nav align-items-start align-items-lg-center rtech-nav-links"
           >
-            <i class="fa-solid fa-location-dot"></i>
-            Localização da Loja
-          </a>
-        </p>
-        <p class="lead mb-3">
-          <span class="text-dark fw-semibold" style="font-size: 1.2rem;">
-            Horário de Atendimento:
-          </span><br>
-          Segunda à Sexta das 9 às 18 horas e Sábados das 9 às 13 horas.
-        </p>
-        <div class="rtech-map-wrapper">
-          <iframe
-            class="card rtech-map"
-            id="gmap_canvas"
-            src="https://maps.google.com/maps?q=Rtech%20rua%20sargento%20jo%C3%A3o%20lopes,%20855&t=&z=17&ie=UTF8&iwloc=&output=embed"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            title="Mapa com localização da loja R Tech Informática"
-          >
-          </iframe>
+            <li class="nav-item">
+              <a class="nav-link" href="#scrollspyAssistencia"
+                >Assistência Técnica</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scrollspyServicos">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scrollspyGaming">PC Gaming</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scrollspyEmpresa">A Empresa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scrollspyLocalizacao">Localização</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scrollspyContato">Contato</a>
+            </li>
+          </ul>
         </div>
-      </section>
+      </div>
+    </nav>
 
-<!-- CONTATO -->
-<span id="scrollspyContato" class="section-anchor" aria-hidden="true"></span>
-<section class="section-card section-light" aria-labelledby="titulo-contato">
-  <div class="row g-4 align-items-start">
-    <!-- Coluna 1: título + WhatsApp -->
-    <div class="col-12 col-lg-5">
-      <h2 id="titulo-contato" class="featurette-heading texto-titulo mb-3">
-        Contato
-      </h2>
-      <p class="lead mb-3">
-        Para solicitar um orçamento, acompanhar o andamento de um serviço ou
-        obter outras informações, fale conosco pelo WhatsApp:
-      </p>
-      <p class="mb-0">
-        <a
-          href="https://api.whatsapp.com/send?phone=5521967845635"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-lg btn-danger my-1 me-2"
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main role="main" class="rtech-main">
+      <!-- HERO / CARROSSEL -->
+      <section class="hero-carousel" aria-label="Destaques da R Tech">
+        <div
+          id="myCarousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
         >
-          <i class="fa-brands fa-whatsapp me-2"></i>
-          WhatsApp (21) 96784-5635
-        </a>
-      </p>
-    </div>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Assistência Técnica"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="1"
+              aria-label="PC Gaming"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="2"
+              aria-label="Melhoria de Desempenho"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide-to="3"
+              aria-label="Notebooks"
+            ></button>
+          </div>
 
-    <!-- Coluna 2: demais contatos + redes sociais -->
-    <div class="col-12 col-lg-7">
-      <p class="mt-1 mb-2 text-dark">
-        Ou também através de:
-      </p>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div
+                class="assistencia hero-slide-bg"
+                role="img"
+                aria-label="Assistência técnica em computadores"
+              ></div>
+              <div class="hero-overlay"></div>
+              <div
+                class="container h-100 d-flex align-items-center justify-content-center"
+              >
+                <div class="carousel-caption hero-caption">
+                  <h1 class="titulo-carrossel">Assistência Técnica</h1>
+                  <p class="subtitulo-carrossel">
+                    Nossa assistência técnica de informática está pronta para
+                    resolver todos os seus desafios tecnológicos. Desde reparos
+                    rápidos até soluções complexas, nossa equipe especializada
+                    está aqui para garantir que seus dispositivos operem no seu
+                    auge.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-      <div class="border rounded-4 p-3 p-sm-4 bg-light mb-3">
-        <p class="lead mb-2">
-          <span class="text-danger me-2">
-            <i class="fa-solid fa-phone"></i>
-          </span>
-          Telefone fixo: (21) 2026-9388
-        </p>
-        <p class="lead mb-0">
-          <span class="text-danger me-2">
-            <i class="fa-solid fa-envelope"></i>
-          </span>
-          E-mail: papertech.loja@gmail.com
-        </p>
+            <div class="carousel-item">
+              <div
+                class="gaming hero-slide-bg"
+                role="img"
+                aria-label="PC Gamer montado com iluminação"
+              ></div>
+              <div class="hero-overlay"></div>
+              <div class="container">
+                <div class="carousel-caption hero-caption">
+                  <h1 class="titulo-carrossel">PC Gaming</h1>
+                  <p class="subtitulo-carrossel">
+                    A RTech é especializada em PC gaming, oferecendo tecnologia
+                    avançada para otimizar a experiência dos jogadores. Seus
+                    produtos, desde sistemas desktop potentes até periféricos de
+                    alta qualidade, são projetados para proporcionar máximo
+                    desempenho e imersão durante as sessões de jogo.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div
+                class="desempenho hero-slide-bg"
+                role="img"
+                aria-label="Melhoria de desempenho em computadores"
+              ></div>
+              <div class="hero-overlay"></div>
+              <div class="container">
+                <div class="carousel-caption hero-caption">
+                  <h1 class="titulo-carrossel">Melhoria de Desempenho</h1>
+                  <p class="subtitulo-carrossel">
+                    Potencialize o desempenho do seu computador conosco!
+                    Oferecemos serviços especializados de manutenção e
+                    aprimoramento, garantindo que seu dispositivo funcione com
+                    máxima eficiência. Conte com nossa experiência técnica para
+                    resolver problemas, acelerar velocidades e otimizar seu
+                    computador.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div
+                class="suporte-ti hero-slide-bg"
+                role="img"
+                aria-label="Notebook sendo reparado"
+              ></div>
+              <div class="hero-overlay"></div>
+              <div class="container">
+                <div class="carousel-caption hero-caption">
+                  <h1 class="titulo-carrossel">Notebooks</h1>
+                  <p class="subtitulo-carrossel">
+                    Potencialize a vida útil do seu notebook conosco! Oferecemos
+                    serviços especializados de reparo técnico, com troca de
+                    bateria, tela e teclado. Deixe-nos cuidar do seu dispositivo
+                    para garantir que ele volte à sua melhor forma.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- CONTEÚDO PRINCIPAL / SEÇÕES -->
+      <div class="container marketing rtech-sections">
+        <!-- ASSISTÊNCIA TÉCNICA -->
+        <span
+          id="scrollspyAssistencia"
+          class="section-anchor"
+          aria-hidden="true"
+        ></span>
+        <section
+          class="section-card section-dark"
+          aria-labelledby="titulo-assistencia"
+        >
+          <div class="row align-items-center g-4">
+            <div class="col-md-7">
+              <h2
+                id="titulo-assistencia"
+                class="featurette-heading texto-titulo mb-3"
+              >
+                Assistência Técnica
+              </h2>
+              <p class="lead text-light">
+                Analisamos minuciosamente seus equipamentos e elaboramos
+                orçamentos técnicos personalizados, executando reparos tanto no
+                local quanto em nosso laboratório, conforme a viabilidade
+                técnica específica de cada caso. Melhoramos significativamente o
+                desempenho de seus microcomputadores e notebooks, garantimos a
+                operacionalidade contínua de seus nobreaks e proporcionamos
+                serviços especializados de manutenção para impressoras e
+                multifuncionais. Nosso compromisso é assegurar o pleno
+                funcionamento de seus dispositivos, utilizando expertise técnica
+                e soluções eficientes para atender às suas necessidades.
+              </p>
+            </div>
+            <div class="col-md-5">
+              <figure class="rtech-figure">
+                <img
+                  src="assets/img/pcgamer4.jpg"
+                  class="img-fluid rounded-4 shadow-lg"
+                  alt="Técnico trabalhando em um computador"
+                />
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <span
+          id="scrollspyServicos"
+          class="section-anchor"
+          aria-hidden="true"
+        ></span>
+        <section
+          class="section-card section-light"
+          aria-labelledby="titulo-servicos"
+        >
+          <div class="text-center mb-4">
+            <h2 id="titulo-servicos" class="featurette-heading texto-titulo">
+              Serviços
+            </h2>
+            <p class="section-subtitle">
+              Soluções completas em informática para pessoas e empresas.
+            </p>
+          </div>
+
+          <div
+            class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3"
+          >
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i class="fas fa-laptop" aria-hidden="true"></i>
+                </div>
+                <h3>Notebooks</h3>
+                <p>Reparo técnico, troca de bateria, tela e teclado.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i class="fas fa-users-cog" aria-hidden="true"></i>
+                </div>
+                <h3>Atendimento Especializado</h3>
+                <p>Para conserto, laudos e orçamentos.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i class="fas fa-gamepad" aria-hidden="true"></i>
+                </div>
+                <h3>PC Gaming</h3>
+                <p>Monte o PC Gamer ideal para o seu uso.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i class="fa-solid fa-house-laptop" aria-hidden="true"></i>
+                </div>
+                <h3>Customização</h3>
+                <p>Montagem de computadores com as configurações desejadas.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i class="fa-solid fa-jet-fighter" aria-hidden="true"></i>
+                </div>
+                <h3>Melhorias de Desempenho</h3>
+                <p>Upgrade de Memórias, Discos Rígidos, SSDs etc.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
+                </div>
+                <h3>Saúde dos Dispositivos</h3>
+                <p>Remoção de vírus, análise de lentidão ou travamento.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i
+                    class="fa-solid fa-screwdriver-wrench"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <h3>Serviços</h3>
+                <p>Avulsos ou por Contrato. Pessoas Físicas e Empresas.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i class="fa-solid fa-laptop-medical" aria-hidden="true"></i>
+                </div>
+                <h3>Manutenções</h3>
+                <p>Corretivas, Preventivas e Adaptativas.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i class="fas fa-download" aria-hidden="true"></i>
+                </div>
+                <h3>Atualizações</h3>
+                <p>Softwares e Sistemas Operacionais.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i class="fas fa-user-secret" aria-hidden="true"></i>
+                </div>
+                <h3>Segurança</h3>
+                <p>Proteção contra vírus e outros ataques cibernéticos.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                </div>
+                <h3>Configurações</h3>
+                <p>Instalação, configuração e manutenção de equipamentos.</p>
+              </article>
+            </div>
+            <div class="col">
+              <article class="feature feature-card h-100">
+                <div class="feature-icon bg-danger bg-gradient">
+                  <i class="fa-solid fa-icons" aria-hidden="true"></i>
+                </div>
+                <h3>Aplicativos</h3>
+                <p>Reinstalação de Programas e Aplicativos.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- PC GAMING -->
+        <span
+          id="scrollspyGaming"
+          class="section-anchor"
+          aria-hidden="true"
+        ></span>
+        <section
+          class="section-card section-dark"
+          aria-labelledby="titulo-gaming"
+        >
+          <div class="row align-items-center g-4">
+            <div class="col-md-6 order-md-2">
+              <figure class="rtech-figure">
+                <img
+                  src="assets/img/gaming2.jpg"
+                  class="img-fluid rounded-4 shadow-lg"
+                  alt="PC Gamer iluminado montado pela RTech"
+                />
+              </figure>
+            </div>
+            <div class="col-md-6 order-md-1">
+              <h2
+                id="titulo-gaming"
+                class="featurette-heading texto-titulo mb-3"
+              >
+                PC Gaming
+              </h2>
+              <p class="lead text-light">
+                A RTech Informática é uma empresa especializada em fornecer
+                soluções de alta performance para entusiastas de jogos. Com uma
+                vasta gama de produtos e expertise técnica, a RTech é o destino
+                ideal para quem busca montar o seu PC gamer dos sonhos. Com uma
+                equipe especializada e os melhores componentes disponíveis,
+                oferecemos a oportunidade única de construir o seu próprio PC
+                gamer personalizado. Desde placas de vídeo potentes até
+                processadores de última geração, na RTech, cada detalhe é
+                cuidadosamente selecionado para proporcionar a melhor
+                experiência de jogo possível. Deixe-nos ajudar você a montar o
+                PC dos seus sonhos e elevar sua experiência de gaming para o
+                próximo nível.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- AVALIAÇÕES -->
+        <span
+          id="scrollspyReviews"
+          class="section-anchor"
+          aria-hidden="true"
+        ></span>
+        <section
+          class="section-card section-light"
+          aria-labelledby="titulo-avaliacoes"
+        >
+          <h2
+            id="titulo-avaliacoes"
+            class="featurette-heading texto-titulo mb-3"
+          >
+            Avaliações
+          </h2>
+          <p class="section-subtitle">
+            Veja o que os clientes da R Tech Informática dizem sobre nossos
+            serviços.
+          </p>
+          <div class="rtech-embed-wrapper">
+            <!-- Elfsight Google Reviews | Rtech Google Reviews -->
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div
+              class="elfsight-app-d4b9ad58-8d59-4955-9c3f-f316372cde1b"
+              data-elfsight-app-lazy
+            ></div>
+          </div>
+        </section>
+
+        <!-- A EMPRESA -->
+        <span
+          id="scrollspyEmpresa"
+          class="section-anchor"
+          aria-hidden="true"
+        ></span>
+        <section
+          class="section-card section-light"
+          aria-labelledby="titulo-empresa"
+        >
+          <div class="row g-4 align-items-center">
+            <div class="col-md-7 col-xl-7">
+              <h2
+                id="titulo-empresa"
+                class="featurette-heading texto-titulo mb-3"
+              >
+                A RTECH Informática
+              </h2>
+              <p class="lead">
+                A RTECH Informática é uma assistência técnica especializada em
+                computadores e notebooks, reconhecida pela precisão nos
+                diagnósticos, transparência no atendimento e excelência na
+                execução dos serviços. Fundada por Rafael Araújo, a empresa
+                nasceu do desejo de oferecer soluções completas em tecnologia,
+                unindo experiência técnica, atualização constante e um
+                atendimento realmente humano.
+              </p>
+              <p class="lead">
+                Ao longo do tempo, a RTECH expandiu sua atuação, oferecendo
+                manutenção, montagem de PCs Gamer, instalação de sistemas,
+                otimizações, venda de materiais de informática e suporte
+                especializado para clientes residenciais e empresas. Cada
+                equipamento é tratado com responsabilidade e cada cliente recebe
+                informações claras, desde o orçamento até a entrega final.
+              </p>
+              <p class="lead">
+                Localizada na Rua Sargento João Lopes, 855 – Loja B, em frente
+                ao Restaurante Bortolini's, a empresa se tornou referência na
+                região. As diversas avaliações positivas no Google reforçam o
+                comprometimento da RTECH com a excelência, confirmando a
+                confiança e a satisfação de quem já utilizou seus serviços.
+              </p>
+              <p class="lead">
+                A RTECH Informática segue crescendo de forma sólida, sempre
+                buscando oferecer soluções modernas, eficientes e de alto
+                padrão.
+              </p>
+            </div>
+            <div class="col-md-5 col-xl-5">
+              <figure class="rtech-figure text-center">
+                <img
+                  src="assets/img/empresa.jpg"
+                  class="img-fluid rounded-4 shadow-lg"
+                  alt="R Tech Informática"
+                />
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <!-- LOCALIZAÇÃO -->
+        <span
+          id="scrollspyLocalizacao"
+          class="section-anchor"
+          aria-hidden="true"
+        ></span>
+        <section
+          class="section-card section-light"
+          aria-labelledby="titulo-localizacao"
+        >
+          <h2
+            id="titulo-localizacao"
+            class="featurette-heading texto-titulo mb-3"
+          >
+            Localização
+          </h2>
+          <p class="lead">
+            A RTech Informática possui um espaço para atendimento físico aos
+            clientes que fica localizado na
+            <strong class="text-dark">
+              Rua Sargento João Lopes, 855, Loja B, Jardim Carioca, Rio de
+              Janeiro, RJ </strong
+            >.
+          </p>
+          <p class="mb-4">
+            <a
+              href="https://www.google.com.br/maps/place/Rua+Sargento+Jo%C3%A3o+L%C3%B3pes,+855+-+b+-+Jardim+Carioca,+Rio+de+Janeiro+-+RJ,+21931-420/@-22.8068738,-43.1996979,17z/data=!3m1!4b1!4m6!3m5!1s0x997821032ade91:0xcda30ae508f5846e!8m2!3d-22.8068788!4d-43.197123!16s%2Fg%2F11llbvv7_x?entry=ttu"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-lg btn-outline-danger"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+              Localização da Loja
+            </a>
+          </p>
+          <p class="lead mb-3">
+            <span class="text-dark fw-semibold" style="font-size: 1.2rem">
+              Horário de Atendimento: </span
+            ><br />
+            Segunda à Sexta das 9 às 18 horas e Sábados das 9 às 13 horas.
+          </p>
+          <div class="rtech-map-wrapper">
+            <iframe
+              class="card rtech-map"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=Rtech%20rua%20sargento%20jo%C3%A3o%20lopes,%20855&t=&z=17&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              title="Mapa com localização da loja R Tech Informática"
+            >
+            </iframe>
+          </div>
+        </section>
+
+        <!-- CONTATO -->
+        <span
+          id="scrollspyContato"
+          class="section-anchor"
+          aria-hidden="true"
+        ></span>
+        <section
+          class="section-card section-light"
+          aria-labelledby="titulo-contato"
+        >
+          <div class="row g-4 align-items-start">
+            <!-- Coluna 1: título + WhatsApp -->
+            <div class="col-12 col-lg-5">
+              <h2
+                id="titulo-contato"
+                class="featurette-heading texto-titulo mb-3"
+              >
+                Contato
+              </h2>
+              <p class="lead mb-3">
+                Para solicitar um orçamento, acompanhar o andamento de um
+                serviço ou obter outras informações, fale conosco pelo WhatsApp:
+              </p>
+              <p class="mb-0">
+                <a
+                  href="https://api.whatsapp.com/send?phone=5521967845635"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-lg btn-danger my-1 me-2"
+                >
+                  <i class="fa-brands fa-whatsapp me-2"></i>
+                  WhatsApp (21) 96784-5635
+                </a>
+              </p>
+            </div>
+
+            <!-- Coluna 2: demais contatos + redes sociais -->
+            <div class="col-12 col-lg-7">
+              <p class="mt-1 mb-2 text-dark">Ou também através de:</p>
+
+              <div class="border rounded-4 p-3 p-sm-4 bg-light mb-3">
+                <p class="lead mb-2">
+                  <span class="text-danger me-2">
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                  Telefone fixo: (21) 2026-9388
+                </p>
+                <p class="lead mb-0">
+                  <span class="text-danger me-2">
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                  E-mail: papertech.loja@gmail.com
+                </p>
+              </div>
+
+              <p class="lead mb-2">
+                Siga-nos pelas
+                <strong class="text-dark">redes sociais</strong> para acompanhar
+                nosso trabalho e ficar atualizado sobre promoções e avisos:
+              </p>
+
+              <div class="row g-3 justify-content-center">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                  <a
+                    href="https://www.instagram.com/rtechinformaticarj/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline-danger btn-lg w-100"
+                  >
+                    <i class="fa-brands fa-instagram me-2"></i>
+                    Instagram
+                  </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                  <a
+                    href="https://www.tiktok.com/@rtech.informatica"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline-danger btn-lg w-100"
+                  >
+                    <i class="fa-brands fa-tiktok me-2"></i>
+                    Tiktok
+                  </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                  <a
+                    href="https://www.facebook.com/people/R-Tech-Inform%C3%A1tica/61555386150553"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline-danger btn-lg w-100"
+                  >
+                    <i class="fa-brands fa-facebook me-2"></i>
+                    Facebook
+                  </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                  <a
+                    href="https://www.threads.com/@rtechinformaticarj"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-outline-danger btn-lg w-100"
+                  >
+                    <i class="fa-brands fa-threads me-2"></i>
+                    Threads
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
-      <p class="lead mb-2">
-        Siga-nos pelas <strong class="text-dark">redes sociais</strong> para
-        acompanhar nosso trabalho e ficar atualizado sobre promoções e avisos:
-      </p>
+      <!-- FOOTER -->
+      <footer
+        class="rtech-footer bg-dark bg-gradient border-top"
+        aria-label="Rodapé do site"
+      >
+        <div class="container py-4 text-center">
+          <span class="text-white-50 small d-block mb-2">
+            © 2025 R Tech Informática
+          </span>
 
-<div class="row g-3 justify-content-center">
+          <ul class="nav justify-content-center gap-3 mb-0">
+            <li>
+              <a
+                class="social-media"
+                href="https://www.instagram.com/rtechinformaticarj/"
+                target="_blank"
+                ><i class="fa-brands fa-instagram fa-2x"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="social-media"
+                href="https://www.tiktok.com/@rtech.informatica"
+                target="_blank"
+                ><i class="fa-brands fa-tiktok fa-2x"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="social-media"
+                href="https://www.threads.com/@rtechinformaticarj"
+                target="_blank"
+                ><i class="fa-brands fa-threads fa-2x"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="social-media"
+                href="https://www.facebook.com/people/R-Tech-Inform%C3%A1tica/61555386150553"
+                target="_blank"
+                ><i class="fa-brands fa-facebook fa-2x"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                class="social-media"
+                href="https://api.whatsapp.com/send?phone=5521967845635"
+                target="_blank"
+                ><i class="fa-brands fa-whatsapp fa-2x"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </main>
 
-  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-    <a
-      href="https://www.instagram.com/rtechinformaticarj/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn btn-outline-danger btn-lg w-100"
+    <button
+      type="button"
+      class="btn btn-lg btn-danger btn-back-to-top"
+      aria-label="Voltar para o topo"
     >
-      <i class="fa-brands fa-instagram me-2"></i>
-      Instagram
-    </a>
-  </div>
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
-  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-    <a
-      href="https://www.tiktok.com/@rtech.informatica"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn btn-outline-danger btn-lg w-100"
-    >
-      <i class="fa-brands fa-tiktok me-2"></i>
-      Tiktok
-    </a>
-  </div>
+    <!-- Bootstrap bundle JS (inclui Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-    <a
-      href="https://www.facebook.com/people/R-Tech-Inform%C3%A1tica/61555386150553"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn btn-outline-danger btn-lg w-100"
-    >
-      <i class="fa-brands fa-facebook me-2"></i>
-      Facebook
-    </a>
-  </div>
-
-  <div class="col-12 col-sm-6 col-md-6 col-lg-3">
-    <a
-      href="https://www.threads.com/@rtechinformaticarj"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn btn-outline-danger btn-lg w-100"
-    >
-      <i class="fa-brands fa-threads me-2"></i>
-      Threads
-    </a>
-  </div>
-
-</div>
-    </div>
-  </div>
-</section>
-
-</div>
-
-    <!-- FOOTER -->
-<footer class="rtech-footer bg-dark bg-gradient border-top" aria-label="Rodapé do site">
-  <div class="container py-4 text-center">
-
-    <span class="text-white-50 small d-block mb-2">
-      © 2025 R Tech Informática
-    </span>
-
-    <ul class="nav justify-content-center gap-3 mb-0">
-      <li><a class="social-media" href="https://www.instagram.com/rtechinformaticarj/" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a></li>
-      <li><a class="social-media" href="https://www.tiktok.com/@rtech.informatica" target="_blank"><i class="fa-brands fa-tiktok fa-2x"></i></a></li>
-      <li><a class="social-media" href="https://www.threads.com/@rtechinformaticarj" target="_blank"><i class="fa-brands fa-threads fa-2x"></i></a></li>
-      <li><a class="social-media" href="https://www.facebook.com/people/R-Tech-Inform%C3%A1tica/61555386150553" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a></li>
-      <li><a class="social-media" href="https://api.whatsapp.com/send?phone=5521967845635" target="_blank"><i class="fa-brands fa-whatsapp fa-2x"></i></a></li>
-    </ul>
-
-  </div>
-</footer>
-  </main>
-
-  <button
-    type="button"
-    class="btn btn-lg btn-danger btn-back-to-top"
-    aria-label="Voltar para o topo"
-  > 
-    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> 
-  </button>
-
-  <!-- Bootstrap bundle JS (inclui Popper) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Scripts personalizados -->
-  <script src="js/main.js"></script>
-</body>
+    <!-- Scripts personalizados -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
