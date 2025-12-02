@@ -23,4 +23,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // Se preferir rolar até o id="topo", poderia usar:
     // document.getElementById('topo')?.scrollIntoView({ behavior: 'smooth' });
   });
+
+
+  const galleryButtons = document.querySelectorAll('.rtech-gallery-thumb-btn');
+  const galleryCarouselElement = document.getElementById('galeriaCarousel');
+
+  if (galleryButtons.length && galleryCarouselElement) {
+    const galleryCarousel = new bootstrap.Carousel(galleryCarouselElement, {
+      interval: false,
+      ride: false
+    });
+
+    galleryButtons.forEach((btn) => {
+      btn.addEventListener('click', function () {
+        const index = Number(this.getAttribute('data-bs-index')) || 0;
+        galleryCarousel.to(index);
+      });
+    });
+  }
+
 });

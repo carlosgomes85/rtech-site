@@ -28,11 +28,10 @@
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/rtech.css" />
 
-    <link rel="preload" as="image" href="./assets/img/assistencia.jpg">
-    <link rel="preload" as="image" href="./assets/img/gaming.jpg">
-    <link rel="preload" as="image" href="./assets/img/desempenho.jpg">
-    <link rel="preload" as="image" href="./assets/img/suporte-ti.jpg">
-
+    <link rel="preload" as="image" href="./assets/img/assistencia.jpg" />
+    <link rel="preload" as="image" href="./assets/img/gaming.jpg" />
+    <link rel="preload" as="image" href="./assets/img/desempenho.jpg" />
+    <link rel="preload" as="image" href="./assets/img/suporte-ti.jpg" />
   </head>
   <body id="topo">
     <!-- Link de pulo para acessibilidade -->
@@ -93,6 +92,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#scrollspyEmpresa">A Empresa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scrollspyClientes">Clientes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#scrollspyLocalizacao">Localização</a>
@@ -317,7 +319,7 @@
           </div>
 
           <div
-            class="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3"
+            class="row g-4 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4"
           >
             <div class="col">
               <article class="feature feature-card h-100">
@@ -431,6 +433,21 @@
               </article>
             </div>
           </div>
+
+          <p class="lead text-center mt-4 fw-semibold">
+            Solicite já um orçamento conosco através do Whatsapp:
+          </p>
+          <p class="mb-3 text-center">
+            <a
+              href="https://api.whatsapp.com/send?phone=5521967845635"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-lg btn-danger my-1 me-2"
+            >
+              <i class="fa-brands fa-whatsapp me-2"></i>
+              (21) 96784-5635
+            </a>
+          </p>
         </section>
 
         <!-- PC GAMING -->
@@ -478,33 +495,314 @@
           </div>
         </section>
 
-        <!-- AVALIAÇÕES -->
+        <!-- GALERIA DE FOTOS -->
         <span
-          id="scrollspyReviews"
+          id="scrollspyGaleria"
           class="section-anchor"
           aria-hidden="true"
         ></span>
         <section
           class="section-card section-light"
-          aria-labelledby="titulo-avaliacoes"
+          aria-labelledby="titulo-galeria"
         >
-          <h2
-            id="titulo-avaliacoes"
-            class="featurette-heading texto-titulo mb-3"
-          >
-            Avaliações
-          </h2>
-          <p class="section-subtitle">
-            Veja o que os clientes da R Tech Informática dizem sobre nossos
-            serviços.
-          </p>
-          <div class="rtech-embed-wrapper">
-            <!-- Elfsight Google Reviews | Rtech Google Reviews -->
-            <script src="https://elfsightcdn.com/platform.js" async></script>
-            <div
-              class="elfsight-app-d4b9ad58-8d59-4955-9c3f-f316372cde1b"
-              data-elfsight-app-lazy
-            ></div>
+          <div class="text-center mb-4">
+            <h2 id="titulo-galeria" class="featurette-heading texto-titulo">
+              Galeria de Fotos
+            </h2>
+            <p class="section-subtitle">
+              Veja alguns registros do nosso trabalho, PCs montados e o espaço
+              da loja.
+            </p>
+          </div>
+
+          <div class="row g-4 row-cols-3 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 row-cols-xl-7 justify-content-center">
+            <!-- 1 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="0"
+              >
+                <img
+                  src="assets/img/galeria/galeria1.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 1 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 2 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="1"
+              >
+                <img
+                  src="assets/img/galeria/galeria2.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 2 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 3 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="2"
+              >
+                <img
+                  src="assets/img/galeria/galeria3.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 3 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 4 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="3"
+              >
+                <img
+                  src="assets/img/galeria/galeria4.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 4 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 5 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="4"
+              >
+                <img
+                  src="assets/img/galeria/galeria5.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 5 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 6 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="5"
+              >
+                <img
+                  src="assets/img/galeria/galeria6.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 6 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 7 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="6"
+              >
+                <img
+                  src="assets/img/galeria/galeria7.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 7 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 8 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="7"
+              >
+                <img
+                  src="assets/img/galeria/galeria8.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 8 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 9 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="8"
+              >
+                <img
+                  src="assets/img/galeria/galeria9.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 9 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 10 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="9"
+              >
+                <img
+                  src="assets/img/galeria/galeria10.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 10 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 11 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="10"
+              >
+                <img
+                  src="assets/img/galeria/galeria11.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 11 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 12 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="11"
+              >
+                <img
+                  src="assets/img/galeria/galeria12.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 12 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 13 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="12"
+              >
+                <img
+                  src="assets/img/galeria/galeria13.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 13 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 14 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="13"
+              >
+                <img
+                  src="assets/img/galeria/galeria14.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 14 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 15 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="14"
+              >
+                <img
+                  src="assets/img/galeria/galeria15.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 15 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
+
+            <!-- 16 -->
+            <div class="col">
+              <button
+                type="button"
+                class="btn p-0 border-0 w-100 rtech-gallery-thumb-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#galeriaModal"
+                data-bs-index="15"
+              >
+                <img
+                  src="assets/img/galeria/galeria16.jpg"
+                  class="img-fluid rounded-4 shadow-sm rtech-gallery-thumb"
+                  alt="Foto 16 da galeria da R Tech"
+                  loading="lazy"
+                />
+              </button>
+            </div>
           </div>
         </section>
 
@@ -515,7 +813,7 @@
           aria-hidden="true"
         ></span>
         <section
-          class="section-card section-light"
+          class="section-card section-dark"
           aria-labelledby="titulo-empresa"
         >
           <div class="row g-4 align-items-center">
@@ -565,6 +863,192 @@
                 />
               </figure>
             </div>
+          </div>
+        </section>
+
+        <!-- CLIENTES -->
+        <span
+          id="scrollspyClientes"
+          class="section-anchor"
+          aria-hidden="true"
+        ></span>
+        <section
+          class="section-card section-light"
+          aria-labelledby="titulo-clientes"
+        >
+          <div class="text-center mb-4">
+            <h2 id="titulo-clientes" class="featurette-heading texto-titulo">
+              Clientes
+            </h2>
+            <p class="section-subtitle">
+              Alguns clientes dos serviços prestados pela RTech Informática.
+            </p>
+          </div>
+
+          <div
+            class="row g-4 row-cols-3 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 justify-content-center"
+          >
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/cecierj.jpg"
+                  class="cliente-logo-img"
+                  alt="Fundação CECIERJ"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/ennes.jpg"
+                  class="cliente-logo-img"
+                  alt="Ennes Odontologia"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/prisma.jpg"
+                  class="cliente-logo-img"
+                  alt="Prisma Cargo Logistics"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/rbs.png"
+                  class="cliente-logo-img"
+                  alt="RBS Logística Reversa"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/barrozo.jpg"
+                  class="cliente-logo-img"
+                  alt="Barrozo Advogados Associados"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/zerohum.jpg"
+                  class="cliente-logo-img"
+                  alt="Colégio e Curso ZeroHum"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/aja.jpg"
+                  class="cliente-logo-img"
+                  alt="Ministério Aja - O Amor Jamais Acaba"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/adig.jpg"
+                  class="cliente-logo-img"
+                  alt="ADIG - Assembleia de Deus na Ilha do Governador"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/ares.png"
+                  class="cliente-logo-img"
+                  alt="ARES"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/remax.jpg"
+                  class="cliente-logo-img"
+                  alt="RE/MAX Brasil"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/sapore.jpg"
+                  class="cliente-logo-img"
+                  alt="Sapore"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+
+            <div class="col">
+              <figure class="cliente-logo-box">
+                <img
+                  src="assets/img/clientes/montenegro.jpg"
+                  class="cliente-logo-img"
+                  alt="Montenegro"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <!-- AVALIAÇÕES -->
+        <span
+          id="scrollspyReviews"
+          class="section-anchor"
+          aria-hidden="true"
+        ></span>
+        <section
+          class="section-card section-light"
+          aria-labelledby="titulo-avaliacoes"
+        >
+          <h2
+            id="titulo-avaliacoes"
+            class="featurette-heading texto-titulo mb-3"
+          >
+            Avaliações
+          </h2>
+          <p class="section-subtitle">
+            Veja o que os clientes da RTech Informática dizem sobre nossos
+            serviços.
+          </p>
+          <div class="rtech-embed-wrapper">
+            <!-- Elfsight Google Reviews | Rtech Google Reviews -->
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div
+              class="elfsight-app-d4b9ad58-8d59-4955-9c3f-f316372cde1b"
+              data-elfsight-app-lazy
+            ></div>
           </div>
         </section>
 
@@ -675,7 +1159,7 @@
                   <span class="text-danger me-2">
                     <i class="fa-solid fa-envelope"></i>
                   </span>
-                    E-mail: rtechinformaticarj@gmail.com
+                  E-mail: rtechinformaticarj@gmail.com
                 </p>
               </div>
 
@@ -793,6 +1277,207 @@
           </ul>
         </div>
       </footer>
+
+      <!-- MODAL DA GALERIA -->
+      <div
+        class="modal fade"
+        id="galeriaModal"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+          <div class="modal-content bg-black bg-opacity-75 border-0">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-white">Galeria de Fotos</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Fechar"
+              ></button>
+            </div>
+
+            <div class="modal-body pt-0">
+              <div
+                id="galeriaCarousel"
+                class="carousel slide"
+                data-bs-ride="false"
+              >
+                <div class="carousel-inner">
+                  <!-- 1 -->
+                  <div class="carousel-item active">
+                    <img
+                      src="assets/img/galeria/galeria1.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 1 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 2 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria2.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 2 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 3 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria3.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 3 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 4 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria4.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 4 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 5 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria5.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 5 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 6 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria6.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 6 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 7 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria7.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 7 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 8 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria8.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 8 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 9 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria9.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 9 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 10 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria10.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 10 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 11 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria11.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 11 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 12 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria12.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 12 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 13 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria13.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 13 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 14 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria14.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 14 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 15 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria15.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 15 da galeria da R Tech"
+                    />
+                  </div>
+
+                  <!-- 16 -->
+                  <div class="carousel-item">
+                    <img
+                      src="assets/img/galeria/galeria16.jpg"
+                      class="d-block w-100 rtech-gallery-full"
+                      alt="Foto 16 da galeria da R Tech"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#galeriaCarousel"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#galeriaCarousel"
+                  data-bs-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Próximo</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <button
