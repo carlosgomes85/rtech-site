@@ -754,3 +754,30 @@ p {
     transition: none;
   }
 }
+
+/* =========================================================
+   ANIMAÇÃO EM CASCATA - CARDS "SERVIÇOS"
+   ========================================================= */
+
+section[aria-labelledby="titulo-servicos"] .feature-card.cascade-item {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.45s ease-out,
+    transform 0.45s ease-out;
+  transition-delay: var(--cascade-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+section[aria-labelledby="titulo-servicos"].cascade-active .feature-card.cascade-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  section[aria-labelledby="titulo-servicos"] .feature-card.cascade-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

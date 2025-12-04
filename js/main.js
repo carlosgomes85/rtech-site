@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // ================================
+  // BOTÃO "VOLTAR AO TOPO"
+  // ================================
   const backToTopBtn = document.querySelector('.btn-back-to-top');
-  if (!backToTopBtn) return;
 
   function toggleBackToTop() {
+    if (!backToTopBtn) return;
+
     if (window.scrollY > 300) {
       backToTopBtn.classList.add('show');
     } else {
@@ -10,20 +14,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Mostra/oculta ao rolar
   window.addEventListener('scroll', toggleBackToTop);
   toggleBackToTop(); // estado inicial
 
-  // Voltar suavemente para o topo
-  backToTopBtn.addEventListener('click', function () {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      // Ou:
+      // document.getElementById('topo')?.scrollIntoView({ behavior: 'smooth' });
     });
-    // Se preferir rolar até o id="topo", poderia usar:
-    // document.getElementById('topo')?.scrollIntoView({ behavior: 'smooth' });
-  });
-
+  }
 
   // ================================
   // GALERIA - CONTROLE DO CARROSSEL
@@ -31,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const galleryButtons = document.querySelectorAll('.rtech-gallery-thumb-btn');
   const galleryCarouselElement = document.getElementById('galeriaCarousel');
 
-  if (galleryButtons.length && galleryCarouselElement) {
+  if (galleryButtons.length && galleryCarouselElement && typeof bootstrap !== 'undefined') {
     const galleryCarousel = new bootstrap.Carousel(galleryCarouselElement, {
       interval: false,
       ride: false
@@ -50,38 +53,66 @@ document.addEventListener('DOMContentLoaded', function () {
   // ==========================================
   const sections = document.querySelectorAll('.section-card');
 
+  // Seção "Serviços" para efeito em cascata
+  const servicosSection = document.querySelector('section[aria-labelledby="titulo-servicos"]');
+  let servicosFeatureCards = [];
+
+  if (servicosSection) {
+    servicosFeatureCards = servicosSection.querySelectorAll('.feature-card');
+
+    // Marca os cards de serviço para cascata e define o delay
+    servicosFeatureCards.forEach((card, index) => {
+      card.classList.add('cascade-item');
+      // 70ms entre um card e outro (pode ajustar pra 80/100ms se quiser mais lento)
+      card.style.setProperty('--cascade-delay', `${index * 70}ms`);
+    });
+  }
+
   if (sections.length) {
     const prefersReducedMotion = window.matchMedia &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Adiciona a classe base em todos os cards de seção
+    // adiciona classe base em todos os cards de seção
     sections.forEach((section) => {
       section.classList.add('reveal-section');
     });
 
-    if (!prefersReducedMotion && 'IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(
-        (entries, obs) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              // Mostrou uma vez, não precisa observar de novo
-              obs.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          threshold: 0.18 // quando ~18% do card aparecer na tela
-        }
-      );
-
-      sections.forEach((section) => observer.observe(section));
-    } else {
-      // Sem suporte ou com redução de movimento: tudo já visível
+    if (prefersReducedMotion) {
+      // usuário não quer muita animação → mostra tudo direto
       sections.forEach((section) => {
         section.classList.add('is-visible');
       });
+
+      if (servicosSection) {
+        servicosSection.classList.add('cascade-active');
+      }
+    } else {
+      // fallback universal: scroll + getBoundingClientRect
+      const revealOnScroll = () => {
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        const triggerPoint = windowHeight * 0.82; // ~80% da tela
+
+        sections.forEach((section) => {
+          if (section.classList.contains('is-visible')) return; // já animou
+
+          const rect = section.getBoundingClientRect();
+          const top = rect.top;
+
+          if (top < triggerPoint) {
+            section.classList.add('is-visible');
+
+            // Se for a seção de Serviços, ativa a cascata
+            if (servicosSection && section === servicosSection) {
+              servicosSection.classList.add('cascade-active');
+            }
+          }
+        });
+      };
+
+      // roda no load e no scroll/resize
+      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener('resize', revealOnScroll);
+      revealOnScroll();
     }
   }
-
 });
