@@ -726,3 +726,31 @@ p {
   height: auto;
   object-fit: contain;
 }
+
+
+/* =========================================================
+   ANIMAÇÃO DE ENTRADA DOS SECTIONS
+   ========================================================= */
+
+.section-card.reveal-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.section-card.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Se o usuário preferir menos movimento, não anima */
+@media (prefers-reduced-motion: reduce) {
+  .section-card.reveal-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
